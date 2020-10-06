@@ -14,7 +14,7 @@ public class FileNameCreatorImpl implements FileNameCreator {
     @Override
     public String getFileName(Person person, String prefix) {
         String fileName = "";
-        fileName += prefix + "_" + Instant.now().toEpochMilli() + "_" + person.getName() + "_" + person.getSurname() + "_" + person.getPassport() + ".pdf";
+        fileName += prefix + "_" + Instant.now().toEpochMilli() + "_" + person.getName() + "_" + person.getSurname() + "_" + person.getPassport().replaceAll("\\s+", "") + ".pdf";
         return fileName;
     }
 }

@@ -13,9 +13,10 @@ import java.sql.Date;
 @Data
 public class Person {
     private String name;
-    private String surname;
     private String patronymic;
+    private String surname;
     private String passport;
-    private Integer age;
+    private String mail;
+
     private Date date;
 }
